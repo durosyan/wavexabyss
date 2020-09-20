@@ -1,0 +1,68 @@
+.icon-item a svg { width: 3vw; height: 3vw; }
+.icon-item { padding: 4vw; }
+
+.svg-icon { fill: #fff; }
+.svg-icon:hover {
+  fill: #999;
+  text-shadow: 0 0 15px #eee;
+  transition: all 0.6s ease;
+}
+
+button:hover { background-color: #afafaf; }
+button {
+  background-color: white;
+  border-radius: 0.5vw;
+  border: none;
+  cursor: pointer;
+  padding: 0.5vw 0.5vw;
+  text-align: center;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: #afafaf;
+}
+.link-text {
+  color: #6d3f4d;
+  font-size: 1vw;
+  display: none;
+}
+
+/** TEXT ANIMATION **/
+
+.svg-icon:hover + .link-text {
+  display: block;
+  -webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.fade-in-top {
+	-webkit-animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in-top 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+ @-webkit-keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-top {
+  0% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
