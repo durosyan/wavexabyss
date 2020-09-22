@@ -23,3 +23,6 @@ jobs:
 
     - name: Deploy static site to S3 bucket
       run: aws s3 sync ./public/ s3://wavexabyss.co.uk --delete
+
+    - name: Invalidate cache
+      run: aws cloudfront create-invalidation --distribution-id E1DQRSVCLMBRZ8 --paths "index.html"
