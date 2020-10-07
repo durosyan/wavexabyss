@@ -2,6 +2,14 @@ provider "aws" {
   region = "eu-west-1"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "durosyan.tfstates"
+    key    = "wavexabyss.tfstate"
+    region = "eu-west-1"
+  }
+}
+
 resource "aws_s3_bucket" "site" {
   bucket = "wavexabyss.co.uk"
   acl    = "private"
